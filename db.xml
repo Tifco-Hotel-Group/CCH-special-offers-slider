@@ -1,0 +1,16 @@
+<?php xml version="1.0"?>
+<schema version="0.3">
+    <table name="btSpecialofferslider">
+        <field name="bID" type="I">
+            <key/>
+            <unsigned/>
+        </field>
+        <field name="imageandlink" type="I">
+            <default value="0"/>
+            <unsigned/>
+        </field>
+        <field name="imageandlink_url" type="C"></field>
+        <field name="atinternettracking" type="C" size="200"></field>
+        <field name="offertext" type="C" size="30"></field>
+    </table>
+</schema>
