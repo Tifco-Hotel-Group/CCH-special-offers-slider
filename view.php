@@ -3,11 +3,8 @@
 <?php  if ($imageandlink) { ?>
   <?php
      if (trim($imageandlink_url) != "") {
-         echo '<a href="' . $imageandlink_url . '" class="thumbnail" ';
+         echo '<a href="' . $imageandlink_url . '" class="thumbnail" >';
      } ?>
- <?php  if (isset($atinternettracking) && trim($atinternettracking) != "") { ?>
- onclick="return ATTag.click.send({elem:this, <?php  echo h($atinternettracking); ?>});">
- <?php  } ?>
         <?php
 $imageandlink_thumb = Core::make('helper/image')->getThumbnail($imageandlink, 200, 136, true);
                                 $imageandlink_tag = new \HtmlObject\Image();
