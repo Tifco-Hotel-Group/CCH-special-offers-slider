@@ -1,7 +1,7 @@
 <?php  defined("C5_EXECUTE") or die("Access Denied."); ?>
 
 <div class="form-group">
-    <?php 
+    <?php
     if (isset($imageandlink) && $imageandlink > 0) {
         $imageandlink_o = File::getByID($imageandlink);
         if (!is_object($imageandlink_o)) {
@@ -17,14 +17,6 @@
     <?php  echo '<small class="required">' . t('Required') . '</small>'; ?>
     <?php  echo $form->text($view->field('imageandlink_url'), $imageandlink_url, array (
   'maxlength' => 255,
-)); ?>
-</div>
-
-<div class="form-group">
-    <?php  echo $form->label('atinternettracking', t("At Internet tag") . ' <i class="fa fa-question-circle launch-tooltip" data-original-title="' . t("At Internet Tracking") . '"></i>'); ?>
-    <?php  echo isset($btFieldsRequired) && in_array('atinternettracking', $btFieldsRequired) ? '<small class="required">' . t('Required') . '</small>' : null; ?>
-    <?php  echo $form->text($view->field('atinternettracking'), $atinternettracking, array (
-  'maxlength' => 200,
 )); ?>
 </div>
 
