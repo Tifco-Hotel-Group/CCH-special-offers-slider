@@ -1,14 +1,12 @@
 <?php  defined("C5_EXECUTE") or die("Access Denied."); ?>
 <div class="swiper-slide">
 <?php  if ($imageandlink) { ?>
-    <?php 
+    <?php
         if (trim($imageandlink_url) != "") {
-            echo '<a href="' . $imageandlink_url . '" class="thumbnail" ';
+            echo '<a href="' . $imageandlink_url . '" class="thumbnail" >';
         } ?>
-    <?php  if (isset($atinternettracking) && trim($atinternettracking) != "") { ?>
-    onclick="return ATTag.click.send({elem:this, <?php  echo h($atinternettracking); ?>});">
     <?php  } ?>
-        <?php 
+        <?php
 $imageandlink_thumb = Core::make('helper/image')->getThumbnail($imageandlink, 200, 136, true);
                                 $imageandlink_tag = new \HtmlObject\Image();
                                 $imageandlink_tag->src($imageandlink_thumb->src)->width($imageandlink_thumb->width)->height($imageandlink_thumb->height);
