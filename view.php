@@ -1,11 +1,10 @@
 <?php  defined("C5_EXECUTE") or die("Access Denied."); ?>
 <div class="swiper-slide">
 <?php  if ($imageandlink) { ?>
-    <?php
-        if (trim($imageandlink_url) != "") {
-            echo '<a href="' . $imageandlink_url . '" class="thumbnail" >';
-        } ?>
-    <?php  } ?>
+  <?php
+     if (trim($imageandlink_url) != "") {
+         echo '<a href="' . $imageandlink_url . '" class="thumbnail" >';
+     } ?>
         <?php
 $imageandlink_thumb = Core::make('helper/image')->getThumbnail($imageandlink, 200, 136, true);
                                 $imageandlink_tag = new \HtmlObject\Image();
